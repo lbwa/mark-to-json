@@ -24,7 +24,6 @@ class App {
 
     this.__raw = reader(token)
     this.dest = stringify(dest)
-    logger.info('dest :', dest)
     this.content = this.__raw.content
     this.schema = Object.assign(this.__raw.data, extraHeader, {
       [contentKey]: this.content
