@@ -1,6 +1,6 @@
 export interface options {
-  md: string
-  dest?: string // !
+  token: string
+  dest?: string
   extraHeader?: {
     [key: string]: any
   }

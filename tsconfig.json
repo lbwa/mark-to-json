@@ -15,7 +15,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "lib/**/*"
+    "lib/**/*",
+    "samples/**/*"
   ],
   "exclude": [
     "node_modules"

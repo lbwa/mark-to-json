@@ -3,12 +3,20 @@
   "version": "0.0.1",
   "description": "parse markdown to json",
   "main": "dist/lib/index.js",
-  "repository": "git+https://github.com/lbw/mark-to-json.git",
-  "author": "Bowen",
+  "files": [
+    "dist",
+    "lib",
+    "config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbw/mark-to-json.git"
+  },
+  "author": "Bowen <node_env@outlook.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "yarn clean && npx tsc && node dist/lib/index",
+    "dev": "yarn clean && npx tsc && node dist/samples/index",
     "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "clean": "rm -vrf dist/*"
   },
@@ -20,5 +28,21 @@
     "@types/node": "^10.7.1",
     "conventional-changelog-cli": "^2.0.1",
     "typescript": "^3.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/lbwa/mark-to-json/issues"
+  },
+  "homepage": "https://github.com/lbwa/mark-to-json#readme",
+  "keywords": [
+    "mark-to-json",
+    "parser",
+    "yaml",
+    "parse-matter",
+    "documentation",
+    "docs",
+    "files"
+  ],
+  "engines": {
+    "node": ">=7.5.0"
   }
 }

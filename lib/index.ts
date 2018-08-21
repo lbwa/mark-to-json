@@ -12,12 +12,17 @@ class App {
   content: string
   schema: object
   constructor ({
-    md,
+    token,
     dest = `${process.cwd()}/default.json`,
     extraHeader = {},
     contentKey = 'content'
   }: types.options) {
-    this.__raw = reader(md)
+    if (!token) {
+      logger.error(`[fatal]`, 'Parser should have a token !')
+      return
+    }
+
+    this.__raw = reader(token)
     this.dest = stringify(dest)
     logger.info('dest :', dest)
     this.content = this.__raw.content
