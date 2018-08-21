@@ -35,6 +35,8 @@
   "homepage": "https://github.com/lbwa/mark-to-json#readme",
   "keywords": [
     "mark-to-json",
+    "markdown",
+    "json",
     "parser",
     "yaml",
     "parse-matter",
