@@ -1,0 +1,24 @@
+{
+  "name": "mark-to-json",
+  "version": "0.0.1",
+  "description": "parse markdown to json",
+  "main": "dist/lib/index.js",
+  "repository": "git+https://github.com/lbw/mark-to-json.git",
+  "author": "Bowen",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "yarn clean && npx tsc && node dist/lib/index",
+    "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "clean": "rm -vrf dist/*"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "gray-matter": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.7.1",
+    "conventional-changelog-cli": "^2.0.1",
+    "typescript": "^3.0.1"
+  }
+}
