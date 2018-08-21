@@ -1,6 +1,6 @@
 {
   "name": "mark-to-json",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "parse markdown to json",
   "main": "dist/lib/index.js",
   "files": [
