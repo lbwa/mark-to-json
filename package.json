@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lbw/mark-to-json.git"
+    "url": "git+https://github.com/lbwa/mark-to-json.git"
   },
   "author": "Bowen <node_env@outlook.com>",
   "license": "MIT",
