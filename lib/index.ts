@@ -1,13 +1,14 @@
 import reader = require('gray-matter')
 import * as types from '../config/types'
-import { createDir, stringify } from './utils'
+import { stringify } from './utils'
 import logger from './utils/logger'
 
 const path = require('path')
+const mkdirp = require('mkdirp')
 const cws = require('fs').createWriteStream
 
 class App {
-  __raw: reader.GrayMatterFile<string|Buffer>
+  private __raw: reader.GrayMatterFile<string|Buffer>
   dest: string
   content: string
   schema: object
@@ -34,16 +35,21 @@ class App {
   writeStream () {
     const normalizePath = path.resolve(process.cwd(), this.dest)
 
-    createDir(normalizePath)
+    mkdirp(path.dirname(this.dest), (e: Error) => {
+      if (e) {
+        console.error(e)
+        return
+      }
 
-    const ws = cws(
-      normalizePath
-    )
-    ws.on('close', () => {
-      logger.info(`[Write]`, `create static JSON file ${this.dest}`)
+      const ws = cws(
+        normalizePath
+      )
+      ws.on('close', () => {
+        logger.info(`[Write]`, `create static JSON file ${this.dest}`)
+      })
+      ws.write(stringify(this.schema))
+      ws.end()
     })
-    ws.write(stringify(this.schema))
-    ws.end()
   }
 }
 

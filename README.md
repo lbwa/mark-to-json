@@ -1,6 +1,6 @@
 # mark-to-json [![NpmVersion](https://img.shields.io/npm/v/mark-to-json.svg?style=flat-square)](https://www.npmjs.com/package/mark-to-json) [![NodeVersion](https://img.shields.io/node/v/mark-to-json.svg?style=flat-square)](https://www.npmjs.com/package/mark-to-json)
 
-> Parse the markdown into a JSON static file
+> Parse the markdown into a JSON static file, also support multiple-level directories.
 
 ## Installing
 
