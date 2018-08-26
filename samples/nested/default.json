@@ -1,12 +1,1 @@
-{
-  "title": "Nice package",
-  "date": "2018-05-07",
-  "author": "Bowen",
-  "tags": [
-    "Typescript",
-    "JavaScript"
-  ],
-  "errno": 0,
-  "to": "samples/nested/default",
-  "content": "\nThis is a markdown content\n"
-}
+{"title":"Nice package","date":"2018 AUG 01","author":"Bowen","tags":["Typescript","JavaScript"],"errno":0,"to":"samples/nested/default","content":"\nThis is a markdown content\n"}

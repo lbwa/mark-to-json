@@ -1,6 +1,6 @@
 ---
 title:      "Nice package"
-date:       '2018-05-07'
+date:       2018-08-01
 author:     "Bowen"
 tags:
     - Typescript

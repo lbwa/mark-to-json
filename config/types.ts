@@ -5,4 +5,5 @@ export interface options {
     [key: string]: any
   }
   contentKey?: string
+  filter?: Function
 }

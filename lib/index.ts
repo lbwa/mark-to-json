@@ -16,7 +16,8 @@ class App {
     token,
     dest = `${process.cwd()}/default.json`,
     extraHeader = {},
-    contentKey = 'content'
+    contentKey = 'content',
+    filter
   }: types.options) {
     if (!token) {
       logger.error(`[fatal]`, 'Parser should have a token !')
@@ -29,6 +30,15 @@ class App {
     this.schema = Object.assign(this.__raw.data, extraHeader, {
       [contentKey]: this.content
     })
+
+    if (filter && (typeof filter === 'function')) {
+      const normalized = filter(this.schema)
+
+      // 若 filter 存在返回值，那么使用该返回值，否则因为是传入的引用类型值，那么将使用原
+      // this.schema
+      if (normalized) this.schema = normalized
+    }
+
     this.writeStream()
   }
 
