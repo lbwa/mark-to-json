@@ -1,3 +1,13 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/lbwa/mark-to-json/compare/v0.2.0...v0.3.0) (2018-08-26)
+
+
+### Features
+
+* support schema filter ([653298e](https://github.com/lbwa/mark-to-json/commit/653298e))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/lbwa/mark-to-json/compare/v0.1.1...v0.2.0) (2018-08-25)
 
