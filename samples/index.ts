@@ -14,7 +14,7 @@ new Mtj({
     to: 'samples/nested/default'
   },
   contentKey: 'content',
-  filter (schema: schema): string | void {
+  filter (schema: schema): object | void {
     schema.date = formatDate(schema.date)
   }
 })
